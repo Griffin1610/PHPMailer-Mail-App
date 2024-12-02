@@ -22,6 +22,5 @@ Installation and Setup
   
     - change username and password value in user-dashboard.php (Line 64-65). The username must be your email and the password must be a user created       16 digit app password key from google.
     
-
-  
+  download zip file and database file to run program
     
