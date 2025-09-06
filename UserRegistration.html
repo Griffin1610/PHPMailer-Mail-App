@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>User Registration / Login</title>
+        <link rel="stylesheet" href="Registrationstyle.css">
+        <h2>Welcome!</h2>
+    </head>
+    <body>
+        <h3>New Users Register below</h3>
+        <form action="UserRegistration.php" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <button type="submit">Register</button>
+        </form>
+        <h3>Returning Users Login below</h3>
+        <form action ="UserRegistration.php" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="returningUser" name="returningUser" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="returningPassword" name="returningPassword" required><br><br>
+            <button type="submit">Login</button>
+        </form>
+    </body>
+</html>
