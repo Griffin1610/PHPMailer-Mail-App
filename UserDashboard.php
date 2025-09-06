@@ -55,16 +55,18 @@ if(isset($_POST['sendEmail'])) {
     $toEmail = $_POST['toEmail'];
     $subject = $_POST['subject'];
     $message = $_POST['message'];
+
+    $mailConfig = require 'config.php';
     $mail = new PhpMailer(true);
     try {
         // **** MY LOCAL SMTP SERVER. THIS MUST BE CHANGED TO RUN ON OTHER DEVICES ****
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
-        $mail->SMTPAuth = true;
-        $mail->Username = 'griffinpolly@gmail.com'; //my email
-        $mail->Password = 'jmpr cwlv yxqx feyp'; //my App Password (16 digit google Passkey)
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port = 587;
+        $mail->Host       = $mailConfig['host'];
+        $mail->SMTPAuth   = $mailConfig['smtp_auth'];
+        $mail->Username   = $mailConfig['username'];
+        $mail->Password   = $mailConfig['password'];
+        $mail->SMTPSecure = $mailConfig['encryption'];
+        $mail->Port       = $mailConfig['port'];
 
         //send content of email
         $mail->setFrom('griffinpolly@gmail.com', 'Your Name');
